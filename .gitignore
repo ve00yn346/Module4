@@ -1,0 +1,43 @@
+#################################
+# JAVA / SPRING BOOT (MAVEN)
+#################################
+target/
+*.class
+*.jar
+*.war
+*.log
+
+#################################
+# MAVEN WRAPPER (KEEP .mvn!)
+#################################
+.mvn/wrapper/maven-wrapper.jar
+
+#################################
+# STS / ECLIPSE
+#################################
+.settings/
+.project
+.classpath
+.factorypath
+.springBeans
+.sts4-cache/
+
+#################################
+# NODE / ANGULAR
+#################################
+node_modules/
+dist/
+build/
+.angular/
+coverage/
+
+#################################
+# VS CODE
+#################################
+.vscode/
+
+#################################
+# GENERAL
+#################################
+.DS_Store
+Thumbs.db

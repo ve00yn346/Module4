@@ -1,0 +1,5 @@
+package com.currencyconversion.service.proxies;
+
+public class CurrencyExchangeProxy {
+
+}

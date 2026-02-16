@@ -1,0 +1,31 @@
+package com.springsecurity.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.bankapp.repo.UserEntity;
+import com.bankapp.service.UserEntityService;
+
+@Service
+public class CustomUserDetailService implements UserDetailsService {
+
+	UserDetails raj = User.withUsername("raj")
+			.password(passwordEncoder.encode("raj123"))
+			.roles("ADMIN").build();
+
+	UserDetails ekta = User.withUsername("ekta")
+			.password(passwordEncoder.encode("ekta123"))
+			.roles("MGR").build();
+
+	UserDetails gun = User.withUsername("gun")
+			.password(passwordEncoder.encode("gun123"))
+			.roles("CLERK").build();
+	
+	return new InMemoryUserDetailsManager(raj, ekta, gun);
+	}
+
+}
